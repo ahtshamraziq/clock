@@ -10,11 +10,4 @@ setInterval(() => {
   document.querySelector(
     ".min-hand"
   ).style.transform = `rotate(${minuteHandPosition}deg)`;
-}, 10);
-
-// setInterval(() => {
-//   minuteHandPosition = minuteHandPosition + 6;
-//   document.querySelector(
-//     ".minute-hand"
-//   ).style.transform = `rotate(${minuteHandPosition}deg)`;
-// }, 1000);
+}, 1000);

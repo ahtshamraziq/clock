@@ -1,34 +1,39 @@
 .clock {
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
-    background-image: url("./minute.png");
-    position: relative;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  position: relative;
+}
 
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px);
+  background-image: url("dial.svg");
+  background-size: 100%;
 }
 
 .hand.second-hand {
-    position: absolute;
-    width: 27.59px;
-    height: 197.75px;
-    top: calc(50% - 90px);
-    left: 50%;
-    background-color: red;
-    transform: rotate(360deg);
+  position: absolute;
+  width: 5px;
+  height: 150px;
+  left: 50%;
+  bottom: 200px;
+  background-color: black;
+  transform-origin: bottom left;
+  transform: rotate(350deg);
 }
 
 .hand.min-hand {
-    position: absolute;
-    width: 27.59px;
-    height: 197.75px;
-    top: calc(50% - 90px);
-    left: 50%;
-    background-color: blue;
-    transform: rotate(360deg);
-}
-
-.hour-dial {
-    width: 400px;
-    height: 400px;
-
+  background-image: url(hand.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 160px;
+  width: 160px;
+  left: 50%;
+  bottom: 163px;
+  transform-origin: bottom left;
+  transform: rotate(350deg);
 }
