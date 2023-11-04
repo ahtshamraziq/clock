@@ -16,29 +16,40 @@
 
 .hand {
   position: absolute;
-  left: 50%;
-  bottom: 50%;
-  transform-origin: bottom left;
-}
-
-.hand.second-hand {
-  width: 5px;
-  height: 150px;
-  background-color: black;
+  bottom: calc(50% - 20px);
   transform: rotate(0deg);
 }
 
-.hand.min-hand,
-.hand.hour-hand {
-  transform: rotate(-45deg);
+.hand.second-hand {
+  width: 6px;
+  height: 170px;
+  left: calc(50% - 3px);
+  background-color: black;
+  transform-origin: 3px 150px;
+  z-index: 20;
 }
 
 .hand.min-hand {
-  height: 100px;
-  width: 100px;
+  height: 140px;
+  left: calc(50% - 10px);
+  transform-origin: 10px 120px;
 }
 
 .hand.hour-hand {
-  height: 60px;
-  width: 60px;
+  height: 110px;
+  left: calc(50% - 8px);
+  z-index: 10;
+  transform-origin: 8px 90px;
+  transform: rotate(0deg);
+}
+
+.center-pin {
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  bottom: calc(50% - 4px);
+  left: calc(50% - 4px);
+  z-index: 40;
 }

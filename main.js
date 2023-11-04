@@ -4,17 +4,15 @@ const hourHand = document.querySelector(".hour-hand");
 
 function clock() {
   const now = new Date();
-  const imageAngleOffset = -45;
-  const twelveOClock = 90;
 
   const seconds = now.getSeconds();
-  const secondsDegrees = seconds * 6 + twelveOClock;
+  const secondsDegrees = seconds * 6;
 
   const minutes = now.getMinutes();
-  const minutesDegrees = minutes * 6 + twelveOClock + imageAngleOffset;
+  const minutesDegrees = minutes * 6;
 
   const hours = now.getHours();
-  const hoursDegrees = hours * 30 + twelveOClock + imageAngleOffset;
+  const hoursDegrees = hours * 30;
 
   secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
   minHand.style.transform = `rotate(${minutesDegrees}deg)`;
